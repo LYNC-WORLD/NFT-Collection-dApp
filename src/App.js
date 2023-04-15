@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, useNavigate } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
+import { MintContextProvider } from "./context/MintPageContext";
+import Mint from "./Mint";
+
+const App = () => {
+    const navigate = useNavigate();
+
+    return (
+        <div className="app">
+            <Routes>
+                <Route
+                    path="/mint/:contractAddress/:chainName"
+                    element={
+                        <MintContextProvider>
+                            <Mint />
+                        </MintContextProvider>
+                    }
+                />
+                <Route
+                    path="*"
+                    element={<h1>404: Page Not Found! Please Go Back!</h1>}
+                />
+            </Routes>
+            <ToastContainer />
+        </div>
+    );
+};
 
 export default App;
