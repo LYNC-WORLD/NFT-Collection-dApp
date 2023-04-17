@@ -13,7 +13,7 @@ const App = () => {
         <div className="app">
             <Routes>
                 <Route
-                    path="/mint/:contractAddress/:chainName"
+                    path="/mint/:chainName/:contractAddress"
                     element={
                         <MintContextProvider>
                             <Mint />
