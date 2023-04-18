@@ -1,74 +1,79 @@
 @use "./function" as *;
 
 .page-not-found {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  padding: 2rem;
-  @media screen and (max-width: em(540)) {
-    padding: 1rem;
-  }
-
-  .page-content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-
-    ._404-text {
-      font-size: 14rem;
-      @media screen and (max-width: em(768)) {
-        font-size: 10rem;
-      }
-      @media screen and (max-width: em(540)) {
-        font-size: 6.5rem;
-      }
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    @media screen and (max-width: em(540)) {
+        padding: 1rem;
     }
 
-    .page-not-found-msg {
-      font-size: 2.5rem;
-      font-weight: 600;
-      line-height: 1;
-      @media screen and (max-width: em(768)) {
-        font-size: 2rem;
-      }
-      @media screen and (max-width: em(540)) {
-        font-size: 1.3rem;
-        text-align: center;
-      }
-    }
+    .page-content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
 
-    .page-not-found-description {
-      font-size: rem(17);
-      max-width: 60ch;
-      text-align: center;
-      line-height: 1.35;
-      color: rgba(255, 255, 255, 0.8);
-      @media screen and (max-width: em(540)) {
-        font-size: rem(12);
-      }
-    }
+        ._404-text {
+            font-size: 14rem;
+            @media screen and (max-width: em(768)) {
+                font-size: 10rem;
+            }
+            @media screen and (max-width: em(540)) {
+                font-size: 6.5rem;
+            }
+        }
 
-    .home-redirect-btn {
-      margin-top: 1rem;
-      padding-inline: 1.5em;
-      padding-block: 0.75em;
-      background-color: rgba(255, 255, 255, 1);
-      color: rgba(0, 0, 0, 0.925);
-      font-size: rem(15);
-      font-weight: 600;
-      border-radius: 4px;
-      opacity: 0.75;
-      @media screen and (max-width: em(540)) {
-        font-size: rem(12);
-        padding-inline: 1.2em;
-        padding-block: 0.5em;
-      }
+        .page-not-found-msg {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1;
+            @media screen and (max-width: em(768)) {
+                font-size: 2rem;
+            }
+            @media screen and (max-width: em(540)) {
+                font-size: 1.3rem;
+                text-align: center;
+            }
+        }
 
-      &:hover {
-        opacity: 1;
-      }
+        .page-not-found-description {
+            font-size: rem(17);
+            max-width: 60ch;
+            text-align: center;
+            line-height: 1.35;
+            color: rgba(255, 255, 255, 0.8);
+            @media screen and (max-width: em(540)) {
+                font-size: rem(12);
+            }
+        }
+
+        .home-redirect-btn {
+            margin-top: 1rem;
+            padding-inline: 1.5em;
+            padding-block: 0.75em;
+            background-color: rgba(255, 255, 255, 1);
+            color: rgba(0, 0, 0, 0.925);
+            border: 1px solid rgba(255, 255, 255);
+            font-size: rem(15);
+            font-weight: 600;
+            border-radius: 4px;
+
+            @media (hover: hover) {
+                opacity: 0.75;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            @media screen and (max-width: em(768)) {
+                font-size: rem(14);
+            }
+            @media screen and (max-width: em(540)) {
+                font-size: rem(12);
+            }
+        }
     }
-  }
 }
