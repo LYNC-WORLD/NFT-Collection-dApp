@@ -269,10 +269,6 @@ const Mint = () => {
                             "Your NFT is being minted, please wait..."
                         );
 
-                        let ethersProvider = new ethers.providers.Web3Provider(
-                            biconomy
-                        );
-
                         const contractInstance = new ethers.Contract(
                             contractAddress,
                             abi,
@@ -294,7 +290,6 @@ const Mint = () => {
                             gasPrice: ethers.utils.parseUnits("200", "gwei"),
                             gasLimit: 2000000,
                         };
-                        let transactionHash;
 
                         try {
                             let ethersProvider = biconomy.getEthersProvider();
@@ -338,7 +333,6 @@ const Mint = () => {
                                     "Transaction hash : ",
                                     err.returnedHash
                                 );
-                                transactionHash = err.returnedHash;
                             } else {
                                 console.log("Error in biconomy mint: ", err);
                             }
@@ -390,10 +384,6 @@ const Mint = () => {
             .onEvent(biconomy.READY, async () => {
                 toast.loading("Your NFT is being minted, please wait...");
 
-                let ethersProvider = new ethers.providers.Web3Provider(
-                    biconomy
-                );
-
                 const contractInstance = new ethers.Contract(
                     contractAddress,
                     abi,
@@ -415,7 +405,6 @@ const Mint = () => {
                     gasPrice: ethers.utils.parseUnits("200", "gwei"),
                     gasLimit: 2000000,
                 };
-                let transactionHash;
 
                 try {
                     let ethersProvider = biconomy.getEthersProvider();
@@ -440,7 +429,6 @@ const Mint = () => {
                 } catch (err) {
                     if (err.returnedHash && err.expectedHash) {
                         console.log("Transaction hash : ", err.returnedHash);
-                        transactionHash = err.returnedHash;
                     } else {
                         console.log("Error in biconomy mint: ", err);
                     }

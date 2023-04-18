@@ -1,7 +1,11 @@
 @forward "./resets";
+
 @forward "./loader";
 @forward "./confetti";
+
+@forward "./homepage";
 @forward "./mint";
+@forward "./page-not-found";
 
 .text-dull {
     color: #7b7b7b;
