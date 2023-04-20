@@ -73,13 +73,12 @@ const Mint = () => {
         `${process.env.REACT_APP_SERVER_URL}get-biconomy-contracts`,
         requestOptions
       );
-
       if (!res.ok) throw res;
 
       const { data } = await res.json();
       console.log("Biconomy response data: ", data);
 
-      if (!data[0]?.biconomyKey) return navigate("/");
+      if (!data[0]?.biconomyKey) return navigate("/404");
       setApiKey(data[0]?.biconomyKey);
     } catch (err) {
       console.log("Error in fetching biconomy key data: ", err);
@@ -469,8 +468,7 @@ const Mint = () => {
                   </button>
                 </div>
               </div>
-
-              {claimerDetails?.category === "biconomy" ? (
+              {claimerDetails?.contractType === "biconomy" ? (
                 <button
                   onClick={() => {
                     gaslessTxn();
