@@ -10,7 +10,7 @@ import { CgSpinnerAlt } from "react-icons/cg";
 import { toast } from "react-toastify";
 
 import constantsValues from "./constants/ConstantsValues";
-import { chainName, contractAddress } from "./constants/ContractConstants";
+import { chainName, contractAddress } from "./ConfigParams";
 import { useMintContext } from "./context/MintPageContext";
 import { requestSwitchNetwork } from "./helper/switchNetwork";
 import { fetchABIByType } from "./hooks/GetABI";
