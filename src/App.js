@@ -1,6 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
-import HomePage from "./Home";
 
 import { MintContextProvider } from "./context/MintPageContext";
 import Mint from "./Mint";
