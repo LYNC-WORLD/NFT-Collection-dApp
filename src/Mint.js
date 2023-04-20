@@ -40,7 +40,7 @@ const Mint = () => {
     balanceOf: "",
     cost: "",
   });
-
+  console.log(mintDetails);
   const fetchData = async () => {
     if (claimerDetails.contractType === "biconomy") {
       await fetchBiconomyData();
@@ -106,10 +106,14 @@ const Mint = () => {
     let maxSupply, totalSupply, maxMintPerUser, balanceOf, cost;
 
     maxSupply = await nftContract.maxSupply();
-    maxMintPerUser = await nftContract.maxMintPerUser();
-
-    let oldCost = await nftContract.cost();
-    cost = web3.utils.fromWei(oldCost.toString(), "ether");
+    if (claimerDetails.contractType === "biconomy") {
+      maxMintPerUser = await nftContract.maxMintAllowedPerUser();
+      cost = 0;
+    } else {
+      maxMintPerUser = await nftContract.maxMintPerUser();
+      let oldCost = await nftContract.cost();
+      cost = web3.utils.fromWei(oldCost.toString(), "ether");
+    }
 
     if (typeOfContract === "ERC1155Collection") {
       totalSupply = await nftContract.totalSupply("1");
@@ -201,7 +205,10 @@ const Mint = () => {
 
       return;
     }
-
+    if (mintDetails.balanceOf >= mintDetails.maxMintPerUser) {
+      toast.error("You have exceeded your NFTs available to claim!!");
+      return;
+    }
     /** --- Gasless Txn --- */
     setDisable(true);
     const signingAccount = new ethers.Wallet(process.env.REACT_APP_PRIVATE_KEY);
@@ -231,7 +238,7 @@ const Mint = () => {
         );
 
         const { data } = await contractInstance.populateTransaction.mintNewNFT(
-          1,
+          count,
           hash,
           signature
         );
@@ -271,6 +278,8 @@ const Mint = () => {
           toast.error("NFT Minting Failed!");
         } finally {
           setDisable(false);
+          setCount(1);
+          await fetchMintDetails(claimerDetails.contractType);
         }
       })
       .onEvent(biconomy.ERROR, (error, message) => {
@@ -424,7 +433,13 @@ const Mint = () => {
                 <div className="claimer-description">
                   <div className="claimer-description-group">
                     <p className="label">Price</p>
-                    <p className="value">{mintDetails.cost}</p>
+                    <p className="value">
+                      {mintDetails?.cost
+                        ? Number(mintDetails?.cost) === 0
+                          ? "FREE"
+                          : mintDetails.cost
+                        : null}
+                    </p>
                   </div>
                   <div className="claimer-description-group">
                     <p className="label">NFTs Minted</p>
