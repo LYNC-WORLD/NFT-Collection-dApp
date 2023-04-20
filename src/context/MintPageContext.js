@@ -2,10 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { toast } from "react-toastify";
-import {
-    chainName,
-    contractAddress,
-} from "../constants/ConstantsValues";
+import { chainName, contractAddress } from "../constants/ContractConstants";
 import { requestSwitchNetwork } from "../helper/switchNetwork";
 
 const MintContext = createContext();
