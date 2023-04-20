@@ -162,6 +162,7 @@ const Mint = () => {
         return;
       }
     }
+    connectWallet();
   };
 
   const connectWallet = async () => {
