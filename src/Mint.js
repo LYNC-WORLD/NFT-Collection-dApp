@@ -299,7 +299,7 @@ const Mint = () => {
       return;
     }
     if (mintDetails.balanceOf >= mintDetails.maxMintPerUser) {
-      toast.error("You mint your all nfts");
+      toast.error("You have exceeded your NFTs available to mint!!");
       return;
     }
 
