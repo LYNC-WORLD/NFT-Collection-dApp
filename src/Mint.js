@@ -58,6 +58,7 @@ const Mint = () => {
       headers: {
         "Content-Type": "application/json",
         accept: "application/json",
+        "x-api-key": process.env.REACT_APP_API_KEY,
       },
 
       body: JSON.stringify({
