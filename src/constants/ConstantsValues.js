@@ -20,11 +20,10 @@ const constantsValues = {
     openSeaNFTDetails: "https://opensea.io/assets/matic/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
-
   "0x51": {
     chainID: "0x51",
     // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
-    blockExplorer: "https://blockscout.com/shibuya",
+    blockExplorer: "https://blockscout.com/shibuya/address/",
     ChainName: "Shibuya Testnet",
     slug: "Astar",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
