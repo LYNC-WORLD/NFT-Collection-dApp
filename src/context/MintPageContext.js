@@ -2,13 +2,14 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { toast } from "react-toastify";
-import { chainName, contractAddress } from "../ConfigParams";
 import { requestSwitchNetwork } from "../helper/switchNetwork";
 
 const MintContext = createContext();
 export const useMintContext = () => useContext(MintContext);
 
 export const MintContextProvider = ({ children }) => {
+  const chainName = process.env.REACT_APP_ContractAddress;
+  const contractAddress = process.env.REACT_APP_ChainName;
   const navigate = useNavigate();
   const [provider, setProvider] = useState(null);
   const [walletAddress, setWalletAddress] = useState(null);
@@ -59,7 +60,7 @@ export const MintContextProvider = ({ children }) => {
     };
 
     const response = await fetch(
-      `${process.env.REACT_APP_SERVER_URL}get-clamier-details`,
+      `https://betanftdeployer.lync.world/get-clamier-details`,
       requestOptions
     );
 
