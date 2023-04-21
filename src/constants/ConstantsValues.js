@@ -20,10 +20,9 @@ const constantsValues = {
     openSeaNFTDetails: "https://opensea.io/assets/matic/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
-
   "0x51": {
     chainID: "0x51",
-    blockExplorer: "https://blockscout.com/shibuya",
+    blockExplorer: "https://blockscout.com/shibuya/address/",
     ChainName: "Shibuya Testnet",
     slug: "shibuya",
     openSeaCollection: "https://opensea.io/assets?search[query]=",

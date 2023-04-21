@@ -415,15 +415,11 @@ const Mint = () => {
                     )}....${contractAddress.substring(
                       contractAddress.length - 5
                     )}`}</p>
+                    {console.log(constantsValues[claimerDetails?.chainId])}
                     <a
-                      /**
-                       * @todo @arpit29joshi
-                       * href={`${
-                       *    constantsValues[
-                       *        claimerDetails?.chainId
-                       *    ].blockExplorer
-                       * }${contractAddress}`}
-                       */
+                      href={`${
+                        constantsValues[claimerDetails?.chainId]?.blockExplorer
+                      }${contractAddress}`}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
