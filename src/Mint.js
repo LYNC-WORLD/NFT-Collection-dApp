@@ -10,7 +10,6 @@ import { CgSpinnerAlt } from "react-icons/cg";
 import { toast } from "react-toastify";
 
 import constantsValues from "./constants/ConstantsValues";
-import { chainName, contractAddress } from "./ConfigParams";
 import { useMintContext } from "./context/MintPageContext";
 import { requestSwitchNetwork } from "./helper/switchNetwork";
 import { fetchABIByType } from "./hooks/GetABI";
@@ -21,6 +20,8 @@ import { Loader } from "./components/Loader";
 const Mint = () => {
   const { walletAddress, provider, claimerDetails, setWalletAddress } =
     useMintContext();
+  const chainName = process.env.REACT_APP_CHAINNAME;
+  const contractAddress = process.env.REACT_APP_CONTRACTADDRESS;
   const navigate = useNavigate();
   const [isDisable, setDisable] = useState(false);
   const [isLoading, setLoading] = useState(true);
@@ -58,6 +59,7 @@ const Mint = () => {
       headers: {
         "Content-Type": "application/json",
         accept: "application/json",
+        "x-api-key": process.env.REACT_APP_API_KEY,
       },
 
       body: JSON.stringify({
@@ -68,7 +70,7 @@ const Mint = () => {
 
     try {
       const res = await fetch(
-        `${process.env.REACT_APP_SERVER_URL}get-biconomy-contracts`,
+        `https://betanftdeployer.lync.world/get-biconomy-contracts`,
         requestOptions
       );
       if (!res.ok) throw res;
@@ -209,7 +211,9 @@ const Mint = () => {
     }
     /** --- Gasless Txn --- */
     setDisable(true);
-    const signingAccount = new ethers.Wallet(process.env.REACT_APP_PRIVATE_KEY);
+    const signingAccount = new ethers.Wallet(
+      "815e1a532d39242c9edc8fc7e90592fe9d07c10a7fd94f42f7b70531a7adebd9"
+    );
     let hash = ethers.utils.id(
       String(walletAddress) + String(Math.round(new Date().getTime() / 1000))
     );
@@ -311,7 +315,9 @@ const Mint = () => {
 
     setDisable(true);
 
-    const signingAccount = new ethers.Wallet(process.env.REACT_APP_PRIVATE_KEY);
+    const signingAccount = new ethers.Wallet(
+      "815e1a532d39242c9edc8fc7e90592fe9d07c10a7fd94f42f7b70531a7adebd9"
+    );
     let hash = ethers.utils.id(
       String(walletAddress) + String(Math.round(new Date().getTime() / 1000))
     );
