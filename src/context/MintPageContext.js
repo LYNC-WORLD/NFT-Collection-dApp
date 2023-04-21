@@ -8,8 +8,8 @@ const MintContext = createContext();
 export const useMintContext = () => useContext(MintContext);
 
 export const MintContextProvider = ({ children }) => {
-  const chainName = process.env.REACT_APP_ContractAddress;
-  const contractAddress = process.env.REACT_APP_ChainName;
+  const chainName = process.env.REACT_APP_CHAINNAME;
+  const contractAddress = process.env.REACT_APP_CONTRACTADDRESS;
   const navigate = useNavigate();
   const [provider, setProvider] = useState(null);
   const [walletAddress, setWalletAddress] = useState(null);

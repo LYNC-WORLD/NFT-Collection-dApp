@@ -20,8 +20,8 @@ import { Loader } from "./components/Loader";
 const Mint = () => {
   const { walletAddress, provider, claimerDetails, setWalletAddress } =
     useMintContext();
-  const chainName = process.env.REACT_APP_ContractAddress;
-  const contractAddress = process.env.REACT_APP_ChainName;
+  const chainName = process.env.REACT_APP_CHAINNAME;
+  const contractAddress = process.env.REACT_APP_CONTRACTADDRESS;
   const navigate = useNavigate();
   const [isDisable, setDisable] = useState(false);
   const [isLoading, setLoading] = useState(true);
