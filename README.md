@@ -1,10 +1,7 @@
 # Getting Started with NFT Collection Claimer Page Template
+## Steps to setup a collection via LYNC claimer page:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+1. Get API Key from LYNC
 
 ### `yarn start`
 

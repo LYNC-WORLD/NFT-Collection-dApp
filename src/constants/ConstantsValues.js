@@ -23,10 +23,9 @@ const constantsValues = {
 
   "0x51": {
     chainID: "0x51",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://blockscout.com/shibuya",
     ChainName: "Shibuya Testnet",
-    slug: "Astar",
+    slug: "shibuya",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
     openSeaNFTDetails: "https://opensea.io/assets/matic/",
     raribleCollection: "https://rarible.com/collection/polygon/",
@@ -43,7 +42,6 @@ const constantsValues = {
   },
   "0x5": {
     chainID: "0x5",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://goerli.etherscan.io/address/",
     ChainName: "eth-goerli testnet",
     slug: "goerli",
@@ -53,7 +51,6 @@ const constantsValues = {
   },
   "0x250": {
     chainID: "0x250",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://astar.network/address/",
     ChainName: "Astar Mainnet",
     slug: "astar",
@@ -63,7 +60,6 @@ const constantsValues = {
   },
   "0x144": {
     chainID: "0x144",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://explorer.zksync.io/address/",
     ChainName: "zkSync Mainnet",
     slug: "zkSync",
@@ -73,7 +69,6 @@ const constantsValues = {
   },
   "0x118": {
     chainID: "0x118",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://zksync2-testnet.zkscan.io/address/",
     ChainName: "zkSync Testnet",
     slug: "zkSynctestnet",
@@ -81,29 +76,26 @@ const constantsValues = {
     openSeaNFTDetails: "https://opensea.io/assets/matic/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
-  "0x1389": {
-    chainID: "0x1389",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
+  "0x1388": {
+    chainID: "0x1388",
     // blockExplorer: "https://explorer.zksync.io/address/",
-    ChainName: "Mentle Mainnet",
-    slug: "Mentle",
+    ChainName: "Mantle Mainnet",
+    slug: "mantle",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
     openSeaNFTDetails: "https://opensea.io/assets/matic/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
-  "0x1388": {
-    chainID: "0x1388",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
+  "0x1389": {
+    chainID: "0x1389",
     // blockExplorer: "https://explorer.zksync.io/address/",
-    ChainName: "Mentle Testnet",
-    slug: "Mentle Testnet",
+    ChainName: "Mantle Testnet",
+    slug: "mantletestnet",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
     openSeaNFTDetails: "https://opensea.io/assets/matic/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
   "0xA4B1": {
     chainID: "0xA4B1",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://explorer.arbitrum.io/address/",
     ChainName: "Arbitrum One Mainnet",
     slug: "arbitrum",
@@ -113,7 +105,6 @@ const constantsValues = {
   },
   "0x66EED": {
     chainID: "0x66EED",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://goerli.arbiscan.io/address/",
     ChainName: "Arbitrum Goerli Testnet",
     slug: "arbitrumgoerli",
@@ -123,7 +114,6 @@ const constantsValues = {
   },
   "0x42": {
     chainID: "0x42",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://www.oklink.com/oktc/address/",
     ChainName: "OKC Mainnet",
     slug: "okc",
@@ -133,7 +123,6 @@ const constantsValues = {
   },
   "0xA86A": {
     chainID: "0xA86A",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://subnets.avax.network/address/",
     ChainName: "Avalanche Mainnet",
     slug: "avalanche",
@@ -143,7 +132,6 @@ const constantsValues = {
   },
   "0xA869": {
     chainID: "0xA869",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://subnets-test.avax.network/address/",
     ChainName: "Avalanche Fuji Testnet",
     slug: "fuji",
@@ -153,7 +141,6 @@ const constantsValues = {
   },
   "0x41": {
     chainID: "0x41",
-    // forwarder: "0xf0511f123164602042ab2bCF02111fA5D3Fe97CD",
     blockExplorer: "https://www.oklink.com/oktc-test/address/",
     ChainName: "OKC Testnet",
     slug: "okctestnet",
