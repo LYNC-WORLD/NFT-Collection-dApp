@@ -1,37 +1,25 @@
 # Getting Started with NFT Collection Claimer Page Template
+
 ## Steps to setup a collection via LYNC claimer page:
 
-1. Get API Key from LYNC
+1. You can deploy your NFT Collection on: https://betanft.lync.world/
 
-### `yarn start`
+2. Once the contract is deployed, you can get the contract address
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Get API Key from LYNC from here: https://www.lync.world/form.html
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. You can clone this repo, and create a new file in root path, ".env" using .env.example
 
-### `yarn test`
+5. You can paste all the params including contract address, chain name and API Key.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Steps to deploy NFT Collection: 
+![image](https://1898638688-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F3h3YUWYt8sR5rHLOIeFc%2Fuploads%2FLxWwCVqIYj9cAnE7lE6W%2FCollection.png?alt=media&token=90958695-44ad-4476-8cab-3e0b2f111699)
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Choose the type of collection as "Collection"
+2. Provide an image, name, and description that will be displayed on the claimer page, where your community can mint the NFTs.
+3. Enter a Contract name, Contract symbol, and select the desired chain from the network selector dropdown.
+4. Choose the type of contract based on your needs: ERC-721A for unique NFTs, ERC-1155 for multiple copies, or opt for a gasless contract if you want to cover the gas fees for your users.
+5. Input the token URI of your metadata, which should look like this: ipfs://CID/
+6. Specify the maximum number of mints allowed per wallet address, the total supply for the collection, and the cost of minting.
+7. Once all the required information is provided, click on "Deploy" to launch your NFT collection.
+8. Once the contract is deployed, you can share the claimer page with your community to allow the minting of NFTs. Claimer page is available under "Your Contracts"
