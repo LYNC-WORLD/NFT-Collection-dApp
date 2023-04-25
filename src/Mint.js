@@ -327,15 +327,15 @@ const Mint = () => {
     let newProvider = new ethers.providers.Web3Provider(window.ethereum);
     let signer = newProvider.getSigner();
     const nftContract = new ethers.Contract(contractAddress, abi, signer);
-    console.log("mintDetails.cost",mintDetails.cost*3);
-    let cost = Number(mintDetails.cost) * count;
-
+    console.log("mintDetails.cost", mintDetails.cost * 3);
+    let cost = Number(mintDetails.cost) * Number(count);
+    cost = cost.toFixed(6);
     let nftTxn;
 
     try {
       switch (claimerDetails.contractType) {
         case "ERC721ACollection": {
-          console.log("HEYY",cost);
+          console.log("HEYY", cost);
           nftTxn = await nftContract.mintNFT(
             walletAddress,
             count,
