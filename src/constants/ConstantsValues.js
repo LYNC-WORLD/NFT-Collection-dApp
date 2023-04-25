@@ -26,7 +26,6 @@ const constantsValues = {
     ChainName: "Astar Shibuya Testnet",
     slug: "shibuya",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
-    openSeaNFTDetails: "https://blockscout.com/shibuya/address/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
   "0x1": {
@@ -54,7 +53,6 @@ const constantsValues = {
     ChainName: "Astar Mainnet",
     slug: "astar",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
-    openSeaNFTDetails: "https://astar.network/address/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
   "0x144": {
@@ -63,7 +61,6 @@ const constantsValues = {
     ChainName: "zkSync Mainnet",
     slug: "zkSync",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
-    openSeaNFTDetails: "https://explorer.zksync.io/address/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
   "0x118": {
@@ -72,25 +69,22 @@ const constantsValues = {
     ChainName: "zkSync Testnet",
     slug: "zkSynctestnet",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
-    openSeaNFTDetails: "https://zksync2-testnet.zkscan.io/address/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
   "0x1388": {
     chainID: "0x1388",
-    // blockExplorer: "https://explorer.zksync.io/address/",
+    blockExplorer: "https://explorer.testnet.mantle.xyz", //todo
     ChainName: "Mantle Mainnet",
     slug: "Mantle",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
-    openSeaNFTDetails: "https://opensea.io/assets/matic/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
   "0x1389": {
     chainID: "0x1389",
-    // blockExplorer: "https://explorer.zksync.io/address/",
+    blockExplorer: "https://explorer.testnet.mantle.xyz",
     ChainName: "Mantle Testnet",
     slug: "Mantletestnet",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
-    openSeaNFTDetails: "https://opensea.io/assets/matic/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
   "0xA4B1": {
@@ -108,7 +102,7 @@ const constantsValues = {
     ChainName: "Arbitrum goerli testnet",
     slug: "arbitrumgoerli",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
-    openSeaNFTDetails: "https://opensea.io/assets/matic/",
+    openSeaNFTDetails: "https://opensea.io/assets/matic/", //todo
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
   "0x42": {
@@ -117,7 +111,6 @@ const constantsValues = {
     ChainName: "OKC Mainnet",
     slug: "okc",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
-    openSeaNFTDetails: "https://www.oklink.com/oktc/address/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
   "0xA86A": {
@@ -135,7 +128,7 @@ const constantsValues = {
     ChainName: "Avalanche fuji testnet",
     slug: "fuji",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
-    openSeaNFTDetails: "https://opensea.io/assets/matic/",
+    openSeaNFTDetails: "https://opensea.io/assets/matic/", //todo
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
   "0x41": {
@@ -144,7 +137,6 @@ const constantsValues = {
     ChainName: "OKC Testnet",
     slug: "okctestnet",
     openSeaCollection: "https://opensea.io/assets?search[query]=",
-    openSeaNFTDetails: "https://www.oklink.com/oktc-test/address/",
     raribleCollection: "https://rarible.com/collection/polygon/",
   },
 };

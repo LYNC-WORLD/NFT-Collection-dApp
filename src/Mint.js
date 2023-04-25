@@ -607,11 +607,12 @@ const Mint = () => {
                       </svg>
                     </button>
                   </a>
-
                   <a
                     className="view-nft-link"
                     href={`${
-                      constantsValues[claimerDetails?.chainId].openSeaNFTDetails
+                      constantsValues[claimerDetails?.chainId]
+                        ?.openSeaNFTDetails ||
+                      constantsValues[claimerDetails?.chainId].blockExplorer
                     }${contractAddress}/${mintDetails.totalSupply}`}
                     target="_blank"
                     rel="noopener noreferrer"
