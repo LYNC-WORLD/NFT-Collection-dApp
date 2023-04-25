@@ -610,16 +610,9 @@ const Mint = () => {
 
                   <a
                     className="view-nft-link"
-                    /**
-                     * @todo @arpit29joshi
-                     * href={`${
-                     *    constantsValues[
-                     *        claimerDetails?.chainId
-                     *    ].openSeaNFTDetails
-                     * }${contractAddress}/${
-                     *    mintDetails.totalSupply
-                     * }`}
-                     */
+                    href={`${
+                      constantsValues[claimerDetails?.chainId].openSeaNFTDetails
+                    }${contractAddress}/${mintDetails.totalSupply}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
