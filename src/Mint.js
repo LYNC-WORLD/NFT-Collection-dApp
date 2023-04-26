@@ -607,18 +607,31 @@ const Mint = () => {
                       </svg>
                     </button>
                   </a>
-                  <a
-                    className="view-nft-link"
-                    href={`${
-                      constantsValues[claimerDetails?.chainId]
-                        ?.openSeaNFTDetails ||
-                      constantsValues[claimerDetails?.chainId].blockExplorer
-                    }${contractAddress}/${mintDetails.totalSupply}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    View your NFT
-                  </a>
+                  {constantsValues[claimerDetails?.chainId]
+                    ?.openSeaNFTDetails ? (
+                    <a
+                      className="view-nft-link"
+                      href={`${
+                        constantsValues[claimerDetails?.chainId]
+                          ?.openSeaNFTDetails
+                      }${contractAddress}/${mintDetails.totalSupply}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View your NFT
+                    </a>
+                  ) : (
+                    <a
+                      className="view-nft-link"
+                      href={`${
+                        constantsValues[claimerDetails?.chainId].blockExplorer
+                      }${contractAddress}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View your NFT
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
