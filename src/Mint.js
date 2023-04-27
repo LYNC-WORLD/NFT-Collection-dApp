@@ -457,14 +457,14 @@ const Mint = () => {
                         ? Number(mintDetails?.cost) === 0
                           ? "FREE"
                           : mintDetails.cost
-                        : "-"}
+                        : null}
                     </p>
                   </div>
                   <div className="claimer-description-group">
                     <p className="label">NFTs Minted</p>
                     <p className="value">
-                      {mintDetails.totalSupply || "- "}/
-                      {mintDetails.maxSupply || " -"}
+                      {mintDetails.totalSupply }/
+                      {mintDetails.maxSupply}
                     </p>
                   </div>
                 </div>
