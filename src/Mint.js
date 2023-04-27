@@ -6,7 +6,7 @@ import { ethers } from "ethers";
 import web3 from "web3";
 
 import Confetti from "react-confetti";
-import { CgSpinnerAlt } from "react-icons/cg";
+import { FaSpinner } from "react-icons/fa";
 import { toast } from "react-toastify";
 
 import constantsValues from "./constants/ConstantsValues";
@@ -20,8 +20,10 @@ import { Loader } from "./components/Loader";
 const Mint = () => {
   const { walletAddress, provider, claimerDetails, setWalletAddress } =
     useMintContext();
+
   const chainName = process.env.REACT_APP_CHAINNAME;
   const contractAddress = process.env.REACT_APP_CONTRACTADDRESS;
+
   const navigate = useNavigate();
   const [isDisable, setDisable] = useState(false);
   const [isLoading, setLoading] = useState(true);
@@ -39,7 +41,7 @@ const Mint = () => {
     balanceOf: "",
     cost: "",
   });
-  console.log(mintDetails);
+
   const fetchData = async () => {
     if (claimerDetails.contractType === "biconomy") {
       await fetchBiconomyData();
@@ -405,7 +407,12 @@ const Mint = () => {
           <main className="claimer-page">
             <aside className="content">
               <header className="heading-container">
-                <h4 className="content-heading">{claimerDetails.title}</h4>
+                {claimerDetails.title ? (
+                  <h4 className="content-heading">{claimerDetails.title}</h4>
+                ) : (
+                  <span className="content-heading-skeleton"></span>
+                )}
+
                 <div className="wallet-address-display">
                   <ChakraSVG />
                   <div>
@@ -415,7 +422,6 @@ const Mint = () => {
                     )}....${contractAddress.substring(
                       contractAddress.length - 5
                     )}`}</p>
-                    {console.log(constantsValues[claimerDetails?.chainId])}
                     <a
                       href={`${
                         constantsValues[claimerDetails?.chainId]?.blockExplorer
@@ -428,7 +434,18 @@ const Mint = () => {
                   </div>
                 </div>
               </header>
-              {claimerDetails.description}
+              {claimerDetails.description ? (
+                <p className="nft-description">{claimerDetails.description}</p>
+              ) : (
+                <div className="nft-description">
+                  <span className="nft-description-skeleton"></span>
+                  <span className="nft-description-skeleton"></span>
+                  <span className="nft-description-skeleton"></span>
+                  <span className="nft-description-skeleton"></span>
+                  <span className="nft-description-skeleton"></span>
+                  <span className="nft-description-skeleton"></span>
+                </div>
+              )}
 
               <div className="claimer-description-container">
                 <h2 className="claimer-heading">Open Edition</h2>
@@ -440,13 +457,14 @@ const Mint = () => {
                         ? Number(mintDetails?.cost) === 0
                           ? "FREE"
                           : mintDetails.cost
-                        : null}
+                        : "-"}
                     </p>
                   </div>
                   <div className="claimer-description-group">
                     <p className="label">NFTs Minted</p>
                     <p className="value">
-                      {mintDetails.totalSupply}/{mintDetails.maxSupply}
+                      {mintDetails.totalSupply || "- "}/
+                      {mintDetails.maxSupply || " -"}
                     </p>
                   </div>
                 </div>
@@ -495,7 +513,7 @@ const Mint = () => {
                 >
                   {isDisable ? (
                     <span className="state-symbol">
-                      <CgSpinnerAlt className="spinner" />
+                      <FaSpinner className="spinner" />
                     </span>
                   ) : (
                     "Claim NFT"
@@ -511,7 +529,7 @@ const Mint = () => {
                 >
                   {isDisable ? (
                     <span className="state-symbol">
-                      <CgSpinnerAlt className="spinner" />
+                      <FaSpinner className="spinner" />
                     </span>
                   ) : (
                     "Mint NFT"
