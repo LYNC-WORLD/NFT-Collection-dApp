@@ -13,9 +13,14 @@
 5. You can paste all the params including contract address, chain name and API Key.
 
 Example .env:
+
+```
 REACT_APP_API_KEY=""
+
 REACT_APP_CONTRACTADDRESS=""
+
 REACT_APP_CHAINNAME="chainName"
+```
 
 List of Chain Names:
 
