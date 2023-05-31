@@ -12,6 +12,21 @@
 
 5. You can paste all the params including contract address, chain name and API Key.
 
+Example .env:
+REACT_APP_API_KEY=""
+REACT_APP_CONTRACTADDRESS=""
+REACT_APP_CHAINNAME="chainName"
+
+List of Chain Names:
+
+- Mumbai
+- zkEVMTestnet
+- Shibuya
+- Goerli
+- MantleTestnet
+- ArbitrumGoerli
+- FevmTestnet
+
 ## Steps to deploy NFT Collection: 
 ![image](https://1898638688-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F3h3YUWYt8sR5rHLOIeFc%2Fuploads%2FLxWwCVqIYj9cAnE7lE6W%2FCollection.png?alt=media&token=90958695-44ad-4476-8cab-3e0b2f111699)
 
